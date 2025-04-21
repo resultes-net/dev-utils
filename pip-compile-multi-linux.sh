@@ -1,3 +1,5 @@
-#!/bin/env sh
+#!/bin/env bash
 
-pip-compile-multi -d requirements/ --uv --no-upgrade --use-cache --backtracking
+requirements_folder=${1:-requirements}
+
+pip-compile-multi -d "$requirements_folder" --uv --no-upgrade --use-cache --backtracking
